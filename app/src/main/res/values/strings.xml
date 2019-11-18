@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Consume Healthy</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="title_info">Info</string>
+    <string-array name="meal_type_list">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+    </string-array>
+    <string name="calories_message">Leave blank if unsure how many calories the food contains.\n
+                                    All empty entries will be filled automatically with data from
+                                    the USDA after the form is completed.</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/mealType_Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:entries="@array/meal_type_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/add_entry_FAB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mealType_Spinner" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/selectFood_EditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#000000"
+        android:hint="Food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/calories_editText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="cal"
+        android:inputType="numberSigned"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/selectFood_EditText"
+        app:layout_constraintEnd_toStartOf="@id/add_entry_FAB"
+        app:layout_constraintStart_toEndOf="@id/selectFood_EditText"
+        app:layout_constraintTop_toTopOf="@+id/selectFood_EditText" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_entry_FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:clickable="true"
+        app:backgroundTint="#000000"
+
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/calories_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/calories_editText"
+        app:layout_constraintTop_toTopOf="@id/calories_editText"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <TextView
+        android:id="@+id/listFood_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="6"
+        android:text="Food Item"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectFood_EditText" />
+
+    <TextView
+        android:id="@+id/listCalories_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="6"
+        android:text="Calories"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/calories_editText"
+        app:layout_constraintTop_toBottomOf="@+id/calories_editText" />
+
+    <Button
+        android:id="@+id/finish_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="110dp"
+        android:paddingStart="100dp"
+        android:text="Done"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listFood_Text" />
+
+</android.support.constraint.ConstraintLayout>
